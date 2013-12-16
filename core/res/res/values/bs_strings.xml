@@ -74,4 +74,8 @@
     <string name="permlab_interceptSmsSent">intercept outgoing SMS</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_interceptSmsSent">Allows the app to intercept an outgoing SMS. Malicious apps may use this to prevent outgoing SMS messages.</string>
+
+    <!-- Error description on theme switch with ligtsensor mode enabled -->
+    <string name="theme_auto_switch_mode_error">Automatic light condition change mode is enabled. Manual switching is not possible.</string>
+
 </resources>
