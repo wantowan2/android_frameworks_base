@@ -108,4 +108,6 @@
 
     <string name="accessibility_data_connection_HP">HSPA+</string>
 
+    <string name="quick_settings_theme_switch_dark">Dark theme</string>
+    <string name="quick_settings_theme_switch_light">Light theme</string>
 </resources>
