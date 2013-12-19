@@ -4406,6 +4406,25 @@ public class AudioService extends IAudioService.Stub {
         }
     }
 
+    private void showVolumeChangeUi(final int streamType, final int flags) {
+        if (mUiContext != null && mVolumePanel != null) {
+            mVolumePanel.postVolumeChanged(streamType, flags);
+        } else {
+            mHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    if (mUiContext == null) {
+                        mUiContext = ThemeUtils.createUiContext(mContext);
+                    }
+
+                    final Context context = mUiContext != null ? mUiContext : mContext;
+                    mVolumePanel = new VolumePanel(context, AudioService.this);
+                    mVolumePanel.postVolumeChanged(streamType, flags);
+                }
+            });
+        }
+    }
+
     private void displaySafeVolumeWarning() {
         if (mUiContext != null && mVolumePanel != null) {
             mVolumePanel.postDisplaySafeVolumeWarning(0);
