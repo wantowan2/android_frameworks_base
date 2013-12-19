@@ -74,7 +74,6 @@ import android.os.UserHandle;
 import android.os.Vibrator;
 import android.provider.Settings;
 
-import com.android.internal.app.ThemeUtils;
 import com.android.internal.util.cm.DevUtils;
 
 import android.service.dreams.DreamService;
@@ -990,8 +989,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             // Do the switch
             final AudioManager am = (AudioManager)mContext.getSystemService(Context.AUDIO_SERVICE);
             final int ringerMode = am.getRingerMode();
-            final VolumePanel volumePanel = new VolumePanel(ThemeUtils.createUiContext(mContext),
-                                                              (AudioService) getAudioService());
+ /*           final VolumePanel volumePanel; */
             if (ringerMode == AudioManager.RINGER_MODE_NORMAL) {
                 boolean vibrateSetting = Settings.System.getIntForUser(mContext.getContentResolver(),
                         Settings.System.VIBRATE_WHEN_RINGING, 0, UserHandle.USER_CURRENT) != 0;
@@ -1000,8 +998,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             } else {
                 am.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
             }
-            volumePanel.postVolumeChanged(AudioManager.STREAM_RING,AudioManager.FLAG_SHOW_UI
-                                          | AudioManager.FLAG_VIBRATE);
+  /*          volumePanel.postVolumeChanged(AudioManager.STREAM_RING,AudioManager.FLAG_SHOW_UI
+                                          | AudioManager.FLAG_VIBRATE); */
         }
     };
 
@@ -5046,12 +5044,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     updateSystemUiVisibilityLw();
                 }
             }
-        }
-    };
-
-    BroadcastReceiver mThemeChangeReceiver = new BroadcastReceiver() {
-        public void onReceive(Context context, Intent intent) {
-            mUiContext = null;
         }
     };
 
