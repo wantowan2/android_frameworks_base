@@ -1705,7 +1705,7 @@ public final class ActivityManagerService extends ActivityManagerNative
                     notification.defaults = 0;
                     notification.sound = null;
                     notification.vibrate = null;
-                    notification.setLatestEventInfo(getUiContext(),
+                    notification.setLatestEventInfo(context,
                             title, text,
                             PendingIntent.getActivityAsUser(mContext, 0, infoIntent,
                                     PendingIntent.FLAG_CANCEL_CURRENT, null,
