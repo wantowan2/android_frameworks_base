@@ -542,10 +542,8 @@ public class KeyguardHostView extends KeyguardViewBase {
     }
 
     private boolean cameraDisabledByDpm() {
-        boolean disabledSecureKeyguard =
-                (mDisabledFeatures & DevicePolicyManager.KEYGUARD_DISABLE_SECURE_CAMERA) != 0
-                && mLockPatternUtils.isSecure();
-        return mCameraDisabled || disabledSecureKeyguard || !mLockPatternUtils.getCameraEnabled();
+        return mCameraDisabled
+                || (mDisabledFeatures & DevicePolicyManager.KEYGUARD_DISABLE_SECURE_CAMERA) != 0;
     }
 
     private void updateSecurityViews() {
