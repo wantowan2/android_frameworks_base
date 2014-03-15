@@ -4958,9 +4958,22 @@ public final class Settings {
         public static final String GESTURE_SWIPE_DISTANCE = "gesture_swipe_distance";
 
         /**
+         * Whether the service should restart itself or not.
+         *
+         * @hide
+         */
+        public static final String ON_THE_GO_SERVICE_RESTART = "on_the_go_service_restart";
+
+        /**
          * @hide
          */
         public static final String SHOW_GESTURES = "show_gestures";
+
+         /**
+         * Disable profiles from powermenu even if still turned on
+         * @hide
+         */
+        public static final String SHOW_PROFILES = "show_profiles";
 
         /**
          * @hide

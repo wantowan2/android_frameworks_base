@@ -16,6 +16,7 @@
 
 package com.android.systemui.statusbar.phone;
 
+<<<<<<< HEAD
 import static com.android.internal.util.beanstalk.QSConstants.TILES_DEFAULT;
 import static com.android.internal.util.beanstalk.QSConstants.DYNAMIC_TILES_DEFAULT;
 import static com.android.internal.util.beanstalk.QSConstants.TILE_AIRPLANE;
@@ -53,6 +54,7 @@ import static com.android.internal.util.beanstalk.QSConstants.TILE_WIFI;
 import static com.android.internal.util.beanstalk.QSConstants.TILE_WIFIAP;
 import static com.android.internal.util.beanstalk.QSConstants.TILE_REBOOT;
 import static com.android.internal.util.beanstalk.QSConstants.TILE_INTERNALMEMORY;
+import static com.android.internal.util.slim.QSConstants.TILE_ONTHEGO;
 
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -105,6 +107,7 @@ import com.android.systemui.quicksettings.VolumeTile;
 import com.android.systemui.quicksettings.WiFiTile;
 import com.android.systemui.quicksettings.WifiAPTile;
 import com.android.systemui.quicksettings.RebootTile;
+import com.android.systemui.quicksettings.OnTheGoTile;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -255,6 +258,8 @@ public class QuickSettingsController {
                 qs = new ContactTile(mContext, this, findCustomKey(tile));
             } else if (tile.equals(TILE_INTERNALMEMORY)) {
                 qs = new InternalMemory(mContext, this);
+            } else if (tile.contains(TILE_ONTHEGO)) {
+                qs = new OnTheGoTile(mContext, this);
             }
 
             if (qs != null) {

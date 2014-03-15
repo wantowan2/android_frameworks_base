@@ -77,6 +77,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.internal.app.ThemeUtils;
+import com.android.internal.util.nameless.NamelessActions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -342,6 +343,8 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
                             config.getClickActionDescription()) {
                         public void onPress() {
                             mWindowManagerFuncs.reboot();
+                            NamelessActions.processAction(mContext,
+                                    NamelessActions.ACTION_ONTHEGO_TOGGLE);
                         }
 
                         public boolean onLongPress() {

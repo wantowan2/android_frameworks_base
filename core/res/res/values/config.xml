@@ -1479,4 +1479,10 @@
     <!-- bool value to for enabling motion accelerometer -->
     <bool name="use_motion_accel">false</bool>
 
+    <!-- Whether device has hardware buttons -->
+    <bool name="has_hardware_buttons">true</bool>
+
+    <!-- Whether device has advanced settings -->
+    <bool name="has_advanced_settings">true</bool>
+
 </resources>
