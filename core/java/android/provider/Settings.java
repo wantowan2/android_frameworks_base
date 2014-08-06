@@ -2807,6 +2807,18 @@ public final class Settings {
          */
         public static final String LOCKSCREEN_DISABLED = "lockscreen.disabled";
 
+        /**
+         * Whether to allow killing of the foreground app by long-pressing the Back button
+         * @hide
+         */
+        public static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
+
+        /**
+         * Delay Control of Back to Kill
+         * @hide
+         */
+        public static final String KILL_APP_LONGPRESS_BACK_DELAY = "kill_app_longpress_back_delay";
+
 	/**
          * Whether to display notifications on screen when screen is off
          * @hide

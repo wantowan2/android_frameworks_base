@@ -1821,6 +1821,7 @@
   <!-- Hardware Key ReMapping -->
   <java-symbol type="integer" name="config_deviceHardwareKeys" />
   <java-symbol type="bool" name="config_singleStageCameraKey" />
+  <java-symbol type="string" name="app_killed_message" />
 
   <!-- Notification and battery light -->
   <java-symbol type="bool" name="config_intrusiveBatteryLed" />

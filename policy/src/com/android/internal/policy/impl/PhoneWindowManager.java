@@ -2865,8 +2865,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT_OR_SELF);
             }
             return -1;
-        }
-
+}
         // Shortcuts are invoked through Search+key, so intercept those here
         // Any printing key that is chorded with Search should be consumed
         // even if no shortcut was invoked.  This prevents text from being
